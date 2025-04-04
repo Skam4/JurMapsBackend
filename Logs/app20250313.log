@@ -1,0 +1,243 @@
+2025-03-13 20:26:22.133 +01:00 [INF] User profile is available. Using 'C:\Users\ostat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-13 20:26:22.429 +01:00 [WRN] Overriding address(es) 'https://localhost:7299'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-03-13 20:26:22.523 +01:00 [INF] Now listening on: https://localhost:7299
+2025-03-13 20:26:22.524 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-13 20:26:22.525 +01:00 [INF] Hosting environment: Development
+2025-03-13 20:26:22.525 +01:00 [INF] Content root path: E:\jurmaps2
+2025-03-13 20:26:25.875 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-13 20:26:30.046 +01:00 [INF] No SPA development server running at http://localhost:3000 found.
+2025-03-13 20:26:30.153 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-13 20:26:30.160 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 4287.5790ms
+2025-03-13 20:26:30.292 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/favicon.ico - -
+2025-03-13 20:26:31.272 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/favicon.ico - - - 404 0 - 980.0134ms
+2025-03-13 20:26:33.267 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-13 20:26:37.350 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-13 20:26:37.351 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 4083.8727ms
+2025-03-13 20:26:40.371 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-13 20:26:44.429 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-13 20:26:44.430 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 4058.1449ms
+2025-03-13 20:26:47.446 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-13 20:26:57.458 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-13 20:26:57.460 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 10013.3884ms
+2025-03-13 20:27:00.476 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-13 20:27:10.222 +01:00 [INF] SPA proxy is ready. Redirecting to http://localhost:3000.
+2025-03-13 20:27:10.223 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 302 0 - 9747.2152ms
+2025-03-13 20:27:10.448 +01:00 [INF] SPA development server running at 'http://localhost:3000'
+2025-03-13 20:30:59.879 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7299/api/auth/loginuser application/json 48
+2025-03-13 20:30:59.898 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.AuthController.LoginUser (JurMaps)'
+2025-03-13 20:30:59.956 +01:00 [INF] Route matched with {action = "LoginUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Object]] LoginUser(JurMaps.Model.DTO.LoginDto) on controller JurMaps.Controllers.AuthController (JurMaps).
+2025-03-13 20:31:18.943 +01:00 [INF] Executed DbCommand (229ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration", r."RoleId", r."RoleName"
+FROM "Users" AS u
+LEFT JOIN "Roles" AS r ON u."UserRoleId" = r."RoleId"
+WHERE u."UserEmail" = @__email_0
+LIMIT 1
+2025-03-13 20:31:31.573 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:31:31.597 +01:00 [INF] Executed action JurMaps.Controllers.AuthController.LoginUser (JurMaps) in 31636.6956ms
+2025-03-13 20:31:31.599 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.AuthController.LoginUser (JurMaps)'
+2025-03-13 20:31:31.606 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7299/api/auth/loginuser application/json 48 - 200 - application/json;+charset=utf-8 31727.3889ms
+2025-03-13 20:31:31.621 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0
+2025-03-13 20:31:31.655 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:31:31.661 +01:00 [INF] Route matched with {action = "GetUserContextData", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[JurMaps.Model.DTO.UserContextDto]] GetUserContextData(System.String) on controller JurMaps.Controllers.AuthController (JurMaps).
+2025-03-13 20:31:31.705 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:31:31.713 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:31:31.717 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[JurMaps.Model.DTO.UserContextDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 20:31:31.720 +01:00 [INF] Executed action JurMaps.Controllers.AuthController.GetUserContextData (JurMaps) in 57.5755ms
+2025-03-13 20:31:31.721 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:31:31.723 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0 - 200 - application/json;+charset=utf-8 101.6564ms
+2025-03-13 20:31:31.729 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0
+2025-03-13 20:31:31.732 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:31:31.732 +01:00 [INF] Route matched with {action = "GetUserContextData", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[JurMaps.Model.DTO.UserContextDto]] GetUserContextData(System.String) on controller JurMaps.Controllers.AuthController (JurMaps).
+2025-03-13 20:31:31.791 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:31:31.796 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:31:31.798 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[JurMaps.Model.DTO.UserContextDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 20:31:31.799 +01:00 [INF] Executed action JurMaps.Controllers.AuthController.GetUserContextData (JurMaps) in 65.3635ms
+2025-03-13 20:31:31.800 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:31:31.801 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0 - 200 - application/json;+charset=utf-8 71.5174ms
+2025-03-13 20:39:39.771 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserdata/2 - -
+2025-03-13 20:39:39.771 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 - -
+2025-03-13 20:39:39.776 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserdata/2 - -
+2025-03-13 20:39:39.786 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 - -
+2025-03-13 20:39:39.771 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 - -
+2025-03-13 20:39:39.795 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 - -
+2025-03-13 20:39:39.823 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=1 - -
+2025-03-13 20:39:39.832 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.832 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.832 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.867 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserdata/2 - - - 204 - - 90.7184ms
+2025-03-13 20:39:39.832 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.870 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 - - - 204 - - 83.9898ms
+2025-03-13 20:39:39.874 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 - - - 204 - - 102.7365ms
+2025-03-13 20:39:39.930 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 application/json -
+2025-03-13 20:39:39.936 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserdata/2 application/json -
+2025-03-13 20:39:39.832 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.947 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.947 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.832 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.861 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 - - - 204 - - 65.8759ms
+2025-03-13 20:39:39.839 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.880 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=1 - -
+2025-03-13 20:39:39.940 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 application/json -
+2025-03-13 20:39:39.963 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps)'
+2025-03-13 20:39:39.963 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetUserData (JurMaps)'
+2025-03-13 20:39:39.961 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserdata/2 - - - 204 - - 190.3303ms
+2025-03-13 20:39:39.964 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 - - - 204 - - 193.1800ms
+2025-03-13 20:39:39.967 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=1 - - - 204 - - 143.5832ms
+2025-03-13 20:39:39.968 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.969 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=1 application/json -
+2025-03-13 20:39:39.969 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.975 +01:00 [INF] Route matched with {action = "GetLikedMaps", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Collections.Generic.List`1[JurMaps.Model.DTO.MapDto]]] GetLikedMaps(System.String, System.String) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:39.976 +01:00 [INF] Route matched with {action = "GetUserData", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[JurMaps.Model.DTO.ProfileDto]] GetUserData(Int32) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:39.979 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=1 - - - 204 - - 98.9479ms
+2025-03-13 20:39:39.981 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.983 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps)'
+2025-03-13 20:39:39.985 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=1 application/json -
+2025-03-13 20:39:39.994 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps)'
+2025-03-13 20:39:39.999 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:39.999 +01:00 [INF] Route matched with {action = "GetPublicatedMaps", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Collections.Generic.List`1[JurMaps.Model.DTO.MapDto]]] GetPublicatedMaps(System.String, System.String) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:40.001 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps)'
+2025-03-13 20:39:40.005 +01:00 [INF] Route matched with {action = "GetPublicatedMaps", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Collections.Generic.List`1[JurMaps.Model.DTO.MapDto]]] GetPublicatedMaps(System.String, System.String) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:40.007 +01:00 [INF] Route matched with {action = "GetLikedMaps", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Collections.Generic.List`1[JurMaps.Model.DTO.MapDto]]] GetLikedMaps(System.String, System.String) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:40.155 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:39:40.232 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[JurMaps.Model.DTO.ProfileDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 20:39:40.303 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetUserData (JurMaps) in 310.5727ms
+2025-03-13 20:39:40.314 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetUserData (JurMaps)'
+2025-03-13 20:39:40.314 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserdata/2 application/json -
+2025-03-13 20:39:40.315 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserdata/2 application/json - - 200 - application/json;+charset=utf-8 378.4681ms
+2025-03-13 20:39:40.316 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:40.318 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetUserData (JurMaps)'
+2025-03-13 20:39:40.319 +01:00 [INF] Route matched with {action = "GetUserData", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[JurMaps.Model.DTO.ProfileDto]] GetUserData(Int32) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:40.352 +01:00 [INF] Executed DbCommand (83ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__ifUploaded_1='?' (DbType = Boolean), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT m."MapId", m."MapCreatorId", m."MapDescription", m."MapLikes", m."MapName", m."MapPlacesQuantity", m."MapPublicationDate", m."MapThumbnail", m."MapUploaded"
+FROM "Maps" AS m
+WHERE m."MapCreatorId" = @__userId_0 AND m."MapUploaded" = @__ifUploaded_1
+ORDER BY m."MapId"
+LIMIT @__p_3 OFFSET @__p_2
+2025-03-13 20:39:40.352 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."MapId", m."MapId", m."MapCreatorId", m."MapDescription", m."MapLikes", m."MapName", m."MapPlacesQuantity", m."MapPublicationDate", m."MapThumbnail", m."MapUploaded"
+FROM "UserMapLikes" AS u
+INNER JOIN "Maps" AS m ON u."MapId" = m."MapId"
+WHERE u."UserId" = @__userId_0 AND m."MapUploaded"
+ORDER BY m."MapId"
+LIMIT @__p_2 OFFSET @__p_1
+2025-03-13 20:39:40.352 +01:00 [INF] Executed DbCommand (56ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."MapId", m."MapId", m."MapCreatorId", m."MapDescription", m."MapLikes", m."MapName", m."MapPlacesQuantity", m."MapPublicationDate", m."MapThumbnail", m."MapUploaded"
+FROM "UserMapLikes" AS u
+INNER JOIN "Maps" AS m ON u."MapId" = m."MapId"
+WHERE u."UserId" = @__userId_0 AND m."MapUploaded"
+ORDER BY m."MapId"
+LIMIT @__p_2 OFFSET @__p_1
+2025-03-13 20:39:40.352 +01:00 [INF] Executed DbCommand (94ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__ifUploaded_1='?' (DbType = Boolean), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT m."MapId", m."MapCreatorId", m."MapDescription", m."MapLikes", m."MapName", m."MapPlacesQuantity", m."MapPublicationDate", m."MapThumbnail", m."MapUploaded"
+FROM "Maps" AS m
+WHERE m."MapCreatorId" = @__userId_0 AND m."MapUploaded" = @__ifUploaded_1
+ORDER BY m."MapId"
+LIMIT @__p_3 OFFSET @__p_2
+2025-03-13 20:39:40.352 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:39:40.371 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Collections.Generic.List`1[[JurMaps.Model.DTO.MapDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:39:40.372 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Collections.Generic.List`1[[JurMaps.Model.DTO.MapDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:39:40.397 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[JurMaps.Model.DTO.ProfileDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 20:39:40.400 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps) in 385.0518ms
+2025-03-13 20:39:40.410 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps) in 420.195ms
+2025-03-13 20:39:40.412 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Collections.Generic.List`1[[JurMaps.Model.DTO.MapDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:39:40.412 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetUserData (JurMaps) in 90.1827ms
+2025-03-13 20:39:40.413 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps)'
+2025-03-13 20:39:40.412 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Collections.Generic.List`1[[JurMaps.Model.DTO.MapDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:39:40.415 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps)'
+2025-03-13 20:39:40.419 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetUserData (JurMaps)'
+2025-03-13 20:39:40.420 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=1 application/json - - 200 - application/json;+charset=utf-8 435.3758ms
+2025-03-13 20:39:40.422 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps) in 414.0034ms
+2025-03-13 20:39:40.434 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps)'
+2025-03-13 20:39:40.416 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 application/json -
+2025-03-13 20:39:40.425 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 application/json -
+2025-03-13 20:39:40.440 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:40.427 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserdata/2 application/json - - 200 - application/json;+charset=utf-8 113.1946ms
+2025-03-13 20:39:40.422 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps) in 418.6812ms
+2025-03-13 20:39:40.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=1 application/json - - 200 - application/json;+charset=utf-8 467.4906ms
+2025-03-13 20:39:40.438 +01:00 [INF] CORS policy execution successful.
+2025-03-13 20:39:40.426 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 application/json - - 200 - application/json;+charset=utf-8 496.2169ms
+2025-03-13 20:39:40.441 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps)'
+2025-03-13 20:39:40.444 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps)'
+2025-03-13 20:39:40.447 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps)'
+2025-03-13 20:39:40.449 +01:00 [INF] Route matched with {action = "GetPublicatedMaps", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Collections.Generic.List`1[JurMaps.Model.DTO.MapDto]]] GetPublicatedMaps(System.String, System.String) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:40.452 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 application/json - - 200 - application/json;+charset=utf-8 511.9344ms
+2025-03-13 20:39:40.453 +01:00 [INF] Route matched with {action = "GetLikedMaps", controller = "Profile"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[System.Collections.Generic.List`1[JurMaps.Model.DTO.MapDto]]] GetLikedMaps(System.String, System.String) on controller JurMaps.Controllers.ProfileController (JurMaps).
+2025-03-13 20:39:40.466 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__ifUploaded_1='?' (DbType = Boolean), @__p_3='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT m."MapId", m."MapCreatorId", m."MapDescription", m."MapLikes", m."MapName", m."MapPlacesQuantity", m."MapPublicationDate", m."MapThumbnail", m."MapUploaded"
+FROM "Maps" AS m
+WHERE m."MapCreatorId" = @__userId_0 AND m."MapUploaded" = @__ifUploaded_1
+ORDER BY m."MapId"
+LIMIT @__p_3 OFFSET @__p_2
+2025-03-13 20:39:40.469 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."MapId", m."MapId", m."MapCreatorId", m."MapDescription", m."MapLikes", m."MapName", m."MapPlacesQuantity", m."MapPublicationDate", m."MapThumbnail", m."MapUploaded"
+FROM "UserMapLikes" AS u
+INNER JOIN "Maps" AS m ON u."MapId" = m."MapId"
+WHERE u."UserId" = @__userId_0 AND m."MapUploaded"
+ORDER BY m."MapId"
+LIMIT @__p_2 OFFSET @__p_1
+2025-03-13 20:39:40.470 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Collections.Generic.List`1[[JurMaps.Model.DTO.MapDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:39:40.473 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[System.Collections.Generic.List`1[[JurMaps.Model.DTO.MapDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-13 20:39:40.475 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps) in 18.5845ms
+2025-03-13 20:39:40.476 +01:00 [INF] Executed action JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps) in 16.7938ms
+2025-03-13 20:39:40.477 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetPublicatedMaps (JurMaps)'
+2025-03-13 20:39:40.478 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.ProfileController.GetLikedMaps (JurMaps)'
+2025-03-13 20:39:40.479 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserpublicatedmaps?profileId=2&page=0 application/json - - 200 - application/json;+charset=utf-8 53.8393ms
+2025-03-13 20:39:40.481 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/api/profile/getuserlikedmaps?profileId=2&page=0 application/json - - 200 - application/json;+charset=utf-8 65.6168ms
+2025-03-13 20:39:41.120 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0
+2025-03-13 20:39:41.123 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:39:41.124 +01:00 [INF] Route matched with {action = "GetUserContextData", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[JurMaps.Model.DTO.UserContextDto]] GetUserContextData(System.String) on controller JurMaps.Controllers.AuthController (JurMaps).
+2025-03-13 20:39:41.132 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:39:41.140 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:39:41.143 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[JurMaps.Model.DTO.UserContextDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 20:39:41.144 +01:00 [INF] Executed action JurMaps.Controllers.AuthController.GetUserContextData (JurMaps) in 17.5969ms
+2025-03-13 20:39:41.150 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:39:41.151 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0 - 200 - application/json;+charset=utf-8 31.4646ms
+2025-03-13 20:39:41.162 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0
+2025-03-13 20:39:41.164 +01:00 [INF] Executing endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:39:41.166 +01:00 [INF] Route matched with {action = "GetUserContextData", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[ControllerResult`1[JurMaps.Model.DTO.UserContextDto]] GetUserContextData(System.String) on controller JurMaps.Controllers.AuthController (JurMaps).
+2025-03-13 20:39:41.178 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:39:41.206 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."UserId", u."IsVerified", u."LastVerificationEmailSent", u."ResetPasswordToken", u."ResetPasswordTokenExpiration", u."UserCreatedDate", u."UserEmail", u."UserName", u."UserPassword", u."UserProfilePicture", u."UserRoleId", u."VerificationToken", u."VerificationTokenExpiration"
+FROM "Users" AS u
+WHERE u."UserId" = @__userId_0
+LIMIT 1
+2025-03-13 20:39:41.214 +01:00 [INF] Executing ObjectResult, writing value of type 'ControllerResult`1[[JurMaps.Model.DTO.UserContextDto, JurMaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-13 20:39:41.216 +01:00 [INF] Executed action JurMaps.Controllers.AuthController.GetUserContextData (JurMaps) in 46.8533ms
+2025-03-13 20:39:41.219 +01:00 [INF] Executed endpoint 'JurMaps.Controllers.AuthController.GetUserContextData (JurMaps)'
+2025-03-13 20:39:41.221 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:7299/api/auth/getusercontextdata application/json 0 - 200 - application/json;+charset=utf-8 58.2295ms

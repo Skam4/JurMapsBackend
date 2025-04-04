@@ -1,0 +1,28 @@
+2025-03-06 22:08:38.131 +01:00 [INF] User profile is available. Using 'C:\Users\ostat\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-06 22:08:38.477 +01:00 [INF] Now listening on: https://localhost:7299
+2025-03-06 22:08:38.479 +01:00 [INF] Now listening on: http://localhost:5111
+2025-03-06 22:08:38.482 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-06 22:08:38.483 +01:00 [INF] Hosting environment: Development
+2025-03-06 22:08:38.484 +01:00 [INF] Content root path: E:\jurmaps2
+2025-03-06 22:08:41.698 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-06 22:08:45.834 +01:00 [INF] No SPA development server running at http://localhost:3000 found.
+2025-03-06 22:08:45.950 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-06 22:08:45.954 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 4258.3616ms
+2025-03-06 22:08:46.054 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/favicon.ico - -
+2025-03-06 22:08:47.195 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/favicon.ico - - - 404 0 - 1143.3475ms
+2025-03-06 22:08:49.016 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-06 22:08:53.098 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-06 22:08:53.099 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 4083.1626ms
+2025-03-06 22:08:56.132 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-06 22:09:00.198 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-06 22:09:00.199 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 4067.2562ms
+2025-03-06 22:09:03.226 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-06 22:09:13.236 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-06 22:09:13.237 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 10011.4192ms
+2025-03-06 22:09:16.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-06 22:09:26.268 +01:00 [INF] SPA proxy is not ready. Returning temporary landing page.
+2025-03-06 22:09:26.269 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 200 - text/html 10009.9498ms
+2025-03-06 22:09:29.302 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7299/ - -
+2025-03-06 22:09:30.449 +01:00 [INF] SPA development server running at 'http://localhost:3000'
+2025-03-06 22:09:30.457 +01:00 [INF] SPA proxy is ready. Redirecting to http://localhost:3000.
+2025-03-06 22:09:30.458 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7299/ - - - 302 0 - 1156.4106ms
