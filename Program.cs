@@ -239,16 +239,6 @@ app.UseAuthorization();
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
-/*app.UseSpa(spa =>
-{
-    spa.Options.SourcePath = "client-app";
-
-    if (app.Environment.IsDevelopment())
-    {
-        spa.UseProxyToSpaDevelopmentServer("https://client-app-phi-liart.vercel.app/");
-    }
-});*/
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
