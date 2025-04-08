@@ -119,8 +119,9 @@ builder.Services.AddCors(options =>
                       {
                           policy.WithOrigins(allowedOrigins)
                                 .AllowAnyHeader()
-                                .AllowAnyMethod();
-                                //.AllowCredentials();
+                                .AllowAnyMethod()
+                                .SetIsOriginAllowedToAllowWildcardSubdomains();
+                          //.AllowCredentials();
                       });
 });
 
@@ -237,6 +238,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
+
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Append("Access-Control-Allow-Origin", "https://jurmaps.vercel.app");
+    await next();
+});
 
 
 /*app.UseSpa(spa =>
