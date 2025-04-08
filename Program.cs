@@ -104,7 +104,25 @@ if (string.IsNullOrEmpty(jwtKey))
     throw new InvalidOperationException("JWT Key is not configured.");
 }
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; // Sprawdziæ czy potrzeba to
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+var allowedOrigins = new string[]
+{
+    "https://client-app-phi-liart.vercel.app",
+    "https://jurmaps.vercel.app",
+    "https://jurmaps-maksymilians-projects-19f26dd6.vercel.app"
+};
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins(allowedOrigins)
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .AllowCredentials();
+                      });
+});
 
 // Add services to the container.
 
@@ -203,11 +221,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+/*app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+    await next();
+});*/
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-app.UseCors("AllowVercelOrigin");
 app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthentication();
