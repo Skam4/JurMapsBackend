@@ -105,7 +105,7 @@ if (string.IsNullOrEmpty(jwtKey))
 }
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-/*var allowedOrigins = new string[]
+var allowedOrigins = new string[]
 {
     "https://client-app-phi-liart.vercel.app",
     "https://jurmaps.vercel.app",
@@ -119,10 +119,10 @@ builder.Services.AddCors(options =>
                       {
                           policy.WithOrigins(allowedOrigins)
                                 .AllowAnyHeader()
-                                .AllowAnyMethod()
-                                .AllowCredentials();
+                                .AllowAnyMethod();
+                                //.AllowCredentials();
                       });
-});*/
+});
 
 // Add services to the container.
 
@@ -191,17 +191,17 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddAuthorization(options => { options.AddPolicy("AdminOnly", policy => policy.RequireRole("admin")); });
 
-builder.Services.AddCors(options =>
+/*builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("https://client-app-phi-liart.vercel.app/", "jurmaps.vercel.app", "jurmaps-maksymilians-projects-19f26dd6.vercel.app")
+                          policy.WithOrigins("https://client-app-phi-liart.vercel.app/", "https://jurmaps.vercel.app", "https://jurmaps-maksymilians-projects-19f26dd6.vercel.app")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod()
                                 .AllowCredentials();
                       });
-});
+});*/
 
 builder.Services.Configure<FormOptions>(options =>
 {
@@ -221,11 +221,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.Use(async (context, next) =>
+/*app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
     await next();
-});
+});*/
 
 
 app.UseHttpsRedirection();
