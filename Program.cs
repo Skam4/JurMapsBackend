@@ -109,8 +109,7 @@ var allowedOrigins = new string[]
 {
     "https://client-app-phi-liart.vercel.app",
     "https://jurmaps.vercel.app",
-    "https://jurmaps-maksymilians-projects-19f26dd6.vercel.app",
-    "https://*.vercel.app"
+    "https://jurmaps-maksymilians-projects-19f26dd6.vercel.app"
 };
 
 builder.Services.AddCors(options =>
@@ -239,13 +238,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseMiddleware<ErrorHandlingMiddleware>();
-
-app.Use(async (context, next) =>
-{
-    context.Response.Headers.Append("Access-Control-Allow-Origin", "https://jurmaps.vercel.app");
-    context.Response.Headers.Append("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
-    await next();
-});
 
 /*app.UseSpa(spa =>
 {
