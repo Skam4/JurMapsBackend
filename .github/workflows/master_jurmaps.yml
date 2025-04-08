@@ -1,28 +1,24 @@
-name: Azure Web App Deploy
+name: Build and Deploy
 
 on:
   push:
     branches:
       - master
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
-
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: "7.0"
+      - name: Build Application
+        run: |
+          dotnet build --configuration Release
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
-
-      - name: Deploy to Azure Web App
+      - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "jurmaps"
-          slot-name: "production"
+          app-name: jurmaps
+          slot-name: Production
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
