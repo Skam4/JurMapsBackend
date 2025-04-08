@@ -105,7 +105,7 @@ if (string.IsNullOrEmpty(jwtKey))
 }
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-var allowedOrigins = new string[]
+/*var allowedOrigins = new string[]
 {
     "https://client-app-phi-liart.vercel.app",
     "https://jurmaps.vercel.app",
@@ -122,7 +122,7 @@ builder.Services.AddCors(options =>
                                 .AllowAnyMethod()
                                 .AllowCredentials();
                       });
-});
+});*/
 
 // Add services to the container.
 
@@ -221,11 +221,11 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-/*app.Use(async (context, next) =>
+app.Use(async (context, next) =>
 {
     context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
     await next();
-});*/
+});
 
 
 app.UseHttpsRedirection();
