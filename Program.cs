@@ -178,7 +178,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("https://client-app-phi-liart.vercel.app/")
+                          policy.WithOrigins("https://client-app-phi-liart.vercel.app/", "jurmaps.vercel.app", "jurmaps-maksymilians-projects-19f26dd6.vercel.app")
                                 .AllowAnyHeader()
                                 .AllowAnyMethod()
                                 .AllowCredentials();
@@ -207,7 +207,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
+app.UseCors("AllowVercelOrigin");
 app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthentication();
