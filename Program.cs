@@ -112,12 +112,23 @@ var allowedOrigins = new string[]
     "https://jurmaps-maksymilians-projects-19f26dd6.vercel.app"
 };
 
-builder.Services.AddCors(options =>
+/*builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
                           policy.WithOrigins("https://jurmaps.vercel.app")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
+});*/
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.AllowAnyOrigin()
                                 .AllowAnyHeader()
                                 .AllowAnyMethod();
                       });
