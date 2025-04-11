@@ -117,13 +117,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins(allowedOrigins)
+                          policy.WithOrigins("https://jurmaps.vercel.app")
                                 .AllowAnyHeader()
-                                .AllowAnyMethod()
-                                .SetIsOriginAllowedToAllowWildcardSubdomains();
-                          //.AllowCredentials();
+                                .AllowAnyMethod();
                       });
 });
+
 
 // Add services to the container.
 

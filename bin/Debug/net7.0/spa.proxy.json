@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "http://localhost:3000",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "E:\\jurmaps2\\client-app\\",
+"MaxTimeoutInSeconds": "120"
+}
+}

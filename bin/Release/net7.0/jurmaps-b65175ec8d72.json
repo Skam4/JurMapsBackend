@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "jurmaps",
+  "private_key_id": "b65175ec8d72c848cfe264202333e6a1f49fea37",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDhb93ghHhAUWHP\nEOrb3js8f9fVlbLuwO3dNNTu3x+GhFiqkyA0RIC7RFQorDKtg5yRbX9OFPR23hOn\nLhk1ttmuARKQZUQzmDS7haAXcuhTb/Qq7pdxSpizm5/uyOyo7mWD6mMJBxUkNsZz\nmymsRbM+LtiP/Xqk/zbQ3pUG0DEGgs8dDY3racNzVhC48oqYC+WuCF/Z+iFPCbmp\nfP4tfR/+lMKcily3sm2WypAK8CrQnl8i11qXPI5s9pZJlZRUeVJi9GFjdTTMpivG\ngIDGe8OwwGbHO/rkFhvyAIveB3FFTmfHAGDRrrE/22vXQXiUfEHammkAmEEe5B4g\nhAq/ycxTAgMBAAECggEAMYEmyJBedcVJRLbS1DBzcqAiTeE/N0W/ljVtUv1FR31V\nmTOQvVmTqUvibUIPKOI/ZgIVFBju7BFtYGdzmsOJ/rd2k6XhObFBVzKLSsrtcLEj\nfbACKps2eC6DCuUtbxVWzoaQc+GNx3ON1cIrfwyZRVz1Kn1/yq7Oo0RVlnbuZR64\nBv9S9TnfJa4yP6BsDkSx64KboNtaHXaKeATpznAeA1IgDvG86Az+cBsYGVbMMsJh\n6MY4R2SrtdjRi5Amo/dtsi1VNY0zaoFkwjl1mm/mmirmC+vRZ48jB5UcjIltq+vN\nSb5yS0i0ra5wUTzL+okm7N17J87NI1IwWaCIsF2daQKBgQDzYUUsZoRyynzgTE5E\n7OEfNBa38IJepZZkN5NcZQTvtWkqWTNWlNodrs5NegincMSQE/k1FAYRKtTsJmUm\nHi64nk2n2QTl4H6YZ6Ls76CfjEOitDSQSytcsccsrxSPsamNvuPyMSgttrwAw8BX\nlh4LU4gLccUrfLgU9wiyaIRTuQKBgQDtIGnmOAJLYCH4nec95EoozCJblUa39y65\nwIMhT1UqFC0yp7kKP7wivW9tNKpCMnizGdvOciDLbbieKwV8afcSqhDwyxCrka2L\nGxacGpEotoCfRgoNWnYrhjNf9F0L+k85Xf0bNrY9jLbAhyciVvFCr4Pas8M+uOQG\nmpKmp9Q+awKBgQCvSXJJrThdeKsB3NNOXxEwqRJnvigXRMmROlm+5N7uSkkJAB+y\njxic4kahlG/hMJ3RayFEcjyAZsndnzWgg4KA4zro1avqaIqk95dncJrN7nbUG1f0\nSL9dTok2DI8RgxKsDT0dNPxMGF1Fa7b/HhZbb/j+zR0F2hi2uMkhvZb4uQKBgQCf\n2j4JqLBDR+cexrPgkUk8/4AZ5SPrWILzTcgYaHatCzT89PxU4GpfsPywzdQJFCUx\n97iqD130RV8zoSTtnjGlL2iEKyBtyKMJJ5WyXmaE36MNvBWCsvz+klWH1h/ztyY5\nMhcyhUuNapK4b2P+TkYOAmwMvypb2iA+I23BU1pNSQKBgQCSedJqRB8SgILoJBFr\nEjeXh+id0o9JHfC2BJN0nk3fbNLzQFZUVk3zu9roNAxWLnXvsjRc/xAhaW3lmYLt\nl8evVVdXKl3mt4FQsl0JlmsI1Mj3jXCpCPauqGHuLLb4qZJB3c8R3UKT2X/edLZv\n+ef8am8ySMpclFUTjFGmeTm7bg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "claude-vision@jurmaps.iam.gserviceaccount.com",
+  "client_id": "101673174362710783183",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/claude-vision%40jurmaps.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
