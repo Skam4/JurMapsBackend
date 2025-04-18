@@ -48,13 +48,13 @@ namespace JurMaps.Services
                 throw new InvalidDataException("Nieprawidłowe dane.");
 
             Map? map = await _mapRepository.GetByIdWithPlacesAsync(mapId);
-            if(map == null)
+            if (map == null)
                 throw new InvalidOperationException("Podana mapa nie istnieje.");
 
             if (!string.IsNullOrEmpty(marker.PlaceCountry))
             {
                 var mapCountry = map.MapCountries.FirstOrDefault(mc =>
-                    mc.Country.CountryName.Equals(marker.PlaceCountry, StringComparison.OrdinalIgnoreCase));
+                    mc.Country.CountryName.Equals(marker.PlaceCountry));
 
                 if (mapCountry != null)
                 {
@@ -65,16 +65,22 @@ namespace JurMaps.Services
                 else
                 {
                     // Jeśli kraj nie istnieje, tworzymy nowy obiekt Country i nowy MapCountry
-                    var country = new Country(marker.PlaceCountry);
+                    var country = await _countryRepository.GetByNameAsync(marker.PlaceCountry) ?? new Country(marker.PlaceCountry);
+
+                    if (country.CountryId == 0)
+                        await _countryRepository.AddAsync(country);
+
                     var newMapCountry = new MapCountry
                     {
                         Map = map,
+                        CountryId = country.CountryId,
                         Country = country,
+                        MapId = map.MapId,
                         ConnectionCount = 1
                     };
+                    await _mapCountryRepository.AddAsync(newMapCountry);
                     map.MapCountries.Add(newMapCountry);
                     await _countryRepository.UpdateAsync(country);
-                    await _mapCountryRepository.AddAsync(newMapCountry);
                 }
             }
 

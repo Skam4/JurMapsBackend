@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JurMaps")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33ea4163c0d560bc1d6c4bd1f259cf5f32a4901d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+635a07bd8418a41d90533160038f6b3fe581dc5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("JurMaps")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JurMaps")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

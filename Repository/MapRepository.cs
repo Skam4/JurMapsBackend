@@ -39,7 +39,7 @@ namespace JurMaps.Repository
         /// <returns>Obiekt mapy lub null, jeśli nie znaleziono.</returns>
         public async Task<Map?> GetByIdWithPlacesAsync(int mapId)
         {
-            return await _context.Maps.Include(m => m.MapPlaces).Include(m => m.MapCountries).FirstOrDefaultAsync(m => m.MapId == mapId);
+            return await _context.Maps.Include(m => m.MapPlaces).Include(m => m.MapCountries).ThenInclude(mc => mc.Country).FirstOrDefaultAsync(m => m.MapId == mapId);
         }
 
         /// <summary>
